@@ -12,6 +12,8 @@ namespace Intex.Models
     {
         [Key]
         public int LocationID { get; set; }
+
+        [Display(Name ="City")]
         public string Description { get; set; }
     }
 }
