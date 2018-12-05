@@ -22,19 +22,19 @@ namespace Intex.Models
 
         //Foreign Keys
         [ForeignKey("Customer")]
-        public int CustomerID { get; set; }
+        public virtual int CustomerID { get; set; }
         public virtual Customer Customer { get; set; }
 
         [ForeignKey("Discount")]
-        public int DiscountID { get; set; }
+        public virtual int DiscountID { get; set; }
         public virtual Discount Discount { get; set; }
 
         [ForeignKey("Employee")]
-        public int EmployeeID { get; set; }
+        public virtual int EmployeeID { get; set; }
         public virtual Employee Employee { get; set; }
 
         [ForeignKey("Quote")]
-        public int QuoteID { get; set; }
+        public virtual int QuoteID { get; set; }
         public virtual Quote Quote { get; set; }
 
     }
