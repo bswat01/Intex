@@ -2,12 +2,20 @@
 @{
     ViewBag.Title = "Home";
 }
+<br />
+<br />
 
-<h2>Seattle Employee Portal</h2>
-
-<div>
-    <a href="@Url.Action("FindCustomer", "Seattle")">Customer Information</a>
-    <a href="@Url.Action("FindWorkOrder", "Seattle")">Current Work Orders</a>
-    <a href="@Url.Action("CreateQuota", "Seattle")">Create Quota</a>
+<div class="section-headlines">
+    <h4>Seattle Employee Portal</h4>
+</div>
+<div class="media-body">
+    <h3>Trying to find a customer?</h3>
+    <div><a href="@Url.Action("FindCustomer", "Seattle")">Search customer Information</a></div>
+    <br />
+    <h3>Searching for a specific work order?</h3>
+    <div><a href="@Url.Action("FindWorkOrder", "Seattle")">Search current Work Orders</a></div>
+    <br />
+    <h3>Create a new quote by clicking here</h3>
+    <div><a href="@Url.Action("CreateQuota", "Seattle")">Create Quote</a></div>
 </div>
 
