@@ -170,7 +170,6 @@
     </Compile>
     <Compile Include="Models\Billing.cs" />
     <Compile Include="Models\Compound.cs" />
-    <Compile Include="Models\CompoundSample.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Discount.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -262,6 +261,8 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Catalog\Index.cshtml" />
     <Content Include="Views\Catalog\Details.cshtml" />
+    <Content Include="Views\Home\GetQuote.cshtml" />
+    <Content Include="Views\Home\InfoSent.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
