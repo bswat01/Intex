@@ -31,13 +31,13 @@ namespace Intex.Controllers
 
             if (ModelState.IsValid)
             {
-                var CheckSeattle = db.Database.SqlQuery<Employee>(
+                var CheckSing = db.Database.SqlQuery<Employee>(
                       "SELECT * " +
                       "FROM EMPLOYEE " +
                       "WHERE Username = '" + login.Username + "' AND " +
                       "Password = '" + login.Password + "' " +
                       "AND LocationID = 1");
-                var CheckSing = db.Database.SqlQuery<Employee>(
+                var CheckSeattle = db.Database.SqlQuery<Employee>(
                       "SELECT * " +
                       "FROM EMPLOYEE " +
                       "WHERE Username = '" + login.Username + "' AND " +
@@ -71,6 +71,13 @@ namespace Intex.Controllers
                 return View(login);
             }
             return View(login);
+        }
+
+        public ActionResult Catalog()
+        {
+            //Summary information on Assay's run
+            //More detailed information
+            return RedirectToAction("Index", "Catalog");
         }
     }
 }
