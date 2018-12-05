@@ -94,12 +94,46 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\myStyles.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\theme.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\avatar\avatar-1.jpg" />
+    <Content Include="images\avatar\avatar-2.jpg" />
+    <Content Include="images\avatar\avatar-3.jpg" />
+    <Content Include="images\avatar\avatar-4.jpg" />
+    <Content Include="images\clients\partner1-150x100.png" />
+    <Content Include="images\clients\partner2.png" />
+    <Content Include="images\clients\partner3.png" />
+    <Content Include="images\clients\partner4.png" />
+    <Content Include="images\clients\partner5.png" />
+    <Content Include="images\clients\partner6-150x100.png" />
+    <Content Include="images\email.png" />
+    <Content Include="images\header\headerbg.jpg" />
+    <Content Include="images\labMan.jpg" />
+    <Content Include="images\Logo.png" />
+    <Content Include="images\NWLogo.jpeg" />
+    <Content Include="images\Pharma-banner.jpg" />
+    <Content Include="images\pic3-450x410.png" />
+    <Content Include="images\portfolio\place-1.jpg" />
+    <Content Include="images\portfolio\place-10.jpg" />
+    <Content Include="images\portfolio\place-2.jpg" />
+    <Content Include="images\portfolio\place-3.jpg" />
+    <Content Include="images\portfolio\place-4.jpg" />
+    <Content Include="images\portfolio\place-5.jpg" />
+    <Content Include="images\portfolio\place-6.jpg" />
+    <Content Include="images\portfolio\place-7.jpg" />
+    <Content Include="images\portfolio\place-8.jpg" />
+    <Content Include="images\portfolio\place-9.jpg" />
+    <Content Include="images\ShortLogo.jpeg" />
+    <Content Include="images\team\1.jpg" />
+    <Content Include="images\team\2.jpg" />
+    <Content Include="images\team\3.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\Intex20181204091158 - Web Deploy.pubxml" />

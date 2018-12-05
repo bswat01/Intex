@@ -3,38 +3,43 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - NorthWest Labs</title>
+    <title>@ViewBag.Title </title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
-    <link href="~/Content/myStyles.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/theme.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Web Portal", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav myNavBar">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Catalog", "Catalog", "Home")</li>
-                    <li>@Html.ActionLink("Login", "Login", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <header class="header" id="jump">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <a class="navbar-brand" href="#"><img src="~/images/ShortLogo.jpeg" height="40" width="150" alt="" /></a>
+                </div>
+                <div class="collapse navbar-collapse hidden-xs">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Catalog", "Catalog", "Home")</li>
+                        <li>@Html.ActionLink("Login", "Login", "Home")</li>
+                    </ul>
 
-    <div class="container body-content">
+                </div>
+
+                <a href="#" class="btn btn-default" id="button">Login</a>
+            </div>
+
+        </nav>
+    </header>
+    <!--**********************************************************************************-->
+  
+    <div class="container body-content" style="background-color:gainsboro">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - NorthWest Labs</p>
+            <p>&copy; @DateTime.Now.Year - North West Labs</p>
         </footer>
     </div>
 
