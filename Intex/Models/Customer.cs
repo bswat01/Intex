@@ -7,18 +7,23 @@ using System.Web;
 
 namespace Intex.Models
 {
-    [Table("Employee")]
-    public class Employee
+    [Table("Customer")]
+    public class Customer
     {
         [Key]
-        public int EmployeeID { get; set; }
+        public int CustomerID { get; set; }
+
         [Required]
-        [Display(Name = "First Name")]
+        [Display(Name ="First Name")]
         public string FirstName { get; set; }
 
         [Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
+
+        [Required]
+        [Display(Name = "Company Name")]
+        public string CompanyName { get; set; }
 
         [Required]
         [Display(Name = "Phone Number")]
@@ -28,24 +33,12 @@ namespace Intex.Models
         [Display(Name = "Email Address")]
         public string Email { get; set; }
 
-        [Required]
-        [Display(Name = "Username")]
-        public string Username { get; set; }
-
-        [Required]
-        [Display(Name = "Password")]
-        public string Password { get; set; }
+        [Display(Name = "Notes")]
+        public string Note { get; set; }
 
         //Foreign Keys
-        [Required]
-        [ForeignKey("Location")]
-        public int LocationID { get; set; }
-        public virtual Location Location { get; set; }
-
-        [ForeignKey("EmployeeType")]
-        public int EmployeeTypeID { get; set; }
-        public virtual EmployeeType EmployeeType { get; set; }
-
-
+        [ForeignKey("Billing")]
+        public int BillingID { get; set; }
+        public virtual Billing Billing { get; set; }
     }
 }
