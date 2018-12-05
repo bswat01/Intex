@@ -18,5 +18,10 @@ namespace Intex.Controllers
         {
             return RedirectToAction("Login", "Home");
         }
+
+        public ActionResult Details()
+        {
+            return View();
+        }
     }
 }
