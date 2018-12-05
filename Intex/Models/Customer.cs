@@ -46,7 +46,7 @@ namespace Intex.Models
 
         //Foreign Keys
         [ForeignKey("Billing")]
-        public virtual int BillingID { get; set; }
+        public virtual int? BillingID { get; set; }
         public virtual Billing Billing { get; set; }
     }
 }

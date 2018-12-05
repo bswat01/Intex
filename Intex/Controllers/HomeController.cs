@@ -79,5 +79,28 @@ namespace Intex.Controllers
             //More detailed information
             return RedirectToAction("Index", "Catalog");
         }
+
+        [HttpGet]
+        public ActionResult GetQuote()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult GetQuote([Bind(Include = "CustomerID,FirstName,LastName,CompanyName,Phone,Email,Note,Username,Password")] Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Customers.Add(customer);
+                db.SaveChanges();
+                return View("InfoSent");
+            }
+            return View(customer);
+        }
+
+        public ActionResult InfoSent()
+        {
+            return View("InfoSent");
+        }
     }
 }
