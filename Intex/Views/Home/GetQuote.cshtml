@@ -3,15 +3,19 @@
 @{
     ViewBag.Title = "GetQuote";
 }
+<br />
+<br />
 
-<h2>GetQuote</h2>
+<div class="section-headlines">
+    <h4>Create your account and get your quote</h4>
+</div>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Customer</h4>
+        <h4></h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -81,5 +85,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to Home", "Index") &raquo;
 </div>
