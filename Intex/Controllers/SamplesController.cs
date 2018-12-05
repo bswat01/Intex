@@ -18,7 +18,7 @@ namespace Intex.Controllers
         // GET: Samples
         public ActionResult Index()
         {
-            var samples = db.Samples.Include(s => s.Test);
+            var samples = db.Samples.Include(s => s.Compound).Include(s => s.Test);
             return View(samples.ToList());
         }
 
@@ -40,6 +40,7 @@ namespace Intex.Controllers
         // GET: Samples/Create
         public ActionResult Create()
         {
+            ViewBag.CompoundID = new SelectList(db.Compounds, "CompoundID", "CompoundName");
             ViewBag.TestID = new SelectList(db.Tests, "TestID", "TestDescription");
             return View();
         }
@@ -49,7 +50,7 @@ namespace Intex.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SampleID,SampleDateCollected,SampleActive,SampleConcentration,SampleResults,TestID")] Sample sample)
+        public ActionResult Create([Bind(Include = "SampleID,SampleDateCollected,SampleActive,SampleConcentration,SampleResults,TestID,CompoundID")] Sample sample)
         {
             if (ModelState.IsValid)
             {
@@ -58,6 +59,7 @@ namespace Intex.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.CompoundID = new SelectList(db.Compounds, "CompoundID", "CompoundName", sample.CompoundID);
             ViewBag.TestID = new SelectList(db.Tests, "TestID", "TestDescription", sample.TestID);
             return View(sample);
         }
@@ -74,6 +76,7 @@ namespace Intex.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.CompoundID = new SelectList(db.Compounds, "CompoundID", "CompoundName", sample.CompoundID);
             ViewBag.TestID = new SelectList(db.Tests, "TestID", "TestDescription", sample.TestID);
             return View(sample);
         }
@@ -83,7 +86,7 @@ namespace Intex.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "SampleID,SampleDateCollected,SampleActive,SampleConcentration,SampleResults,TestID")] Sample sample)
+        public ActionResult Edit([Bind(Include = "SampleID,SampleDateCollected,SampleActive,SampleConcentration,SampleResults,TestID,CompoundID")] Sample sample)
         {
             if (ModelState.IsValid)
             {
@@ -91,6 +94,7 @@ namespace Intex.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.CompoundID = new SelectList(db.Compounds, "CompoundID", "CompoundName", sample.CompoundID);
             ViewBag.TestID = new SelectList(db.Tests, "TestID", "TestDescription", sample.TestID);
             return View(sample);
         }
