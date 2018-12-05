@@ -27,5 +27,8 @@ namespace Intex.Models
         public virtual int TestID { get; set; }
         public virtual Test Test { get; set; }
 
+        [ForeignKey("Compound")]
+        public virtual int CompoundID { get; set; }
+        public virtual Compound Compound { get; set; }
     }
 }
