@@ -56,5 +56,12 @@ namespace Intex.Controllers
         {
             return View();
         }
+
+        public ActionResult Catalog()
+        {
+            //Summary information on Assay's run
+            //More detailed information
+            return RedirectToAction("Index", "Catalog");
+        }
     }
 }
