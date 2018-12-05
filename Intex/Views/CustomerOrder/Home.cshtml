@@ -3,5 +3,20 @@
     ViewBag.Title = "Home";
 }
 
-<h2>Customer's View</h2>
+<br />
+<br />
+<div class="section-headlines">
+    <h4>Customer Portal</h4>
+</div>
+
+<div class="media-body">
+    <h3>Check your current orders here</h3>
+    <div><a href="#">My orders</a><!--display list of customer orders? functionality?--></div>
+    <br />
+    <h3>Get another quote here</h3>
+    <div><a href="@Url.Action("CreateQuota", "Seattle")">Create Quote</a></div>
+    <br />
+    <h3>Change your account settings here</h3>
+    <div><a href="#">Account Settings</a><!--edit customer account?--></div>
+</div>
 
