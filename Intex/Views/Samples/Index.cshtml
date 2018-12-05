@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Intex.Models.Sample>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Test.TestDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SampleDateCollected)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SampleActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SampleConcentration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SampleResults)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Test.TestDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SampleDateCollected)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SampleActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SampleConcentration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SampleResults)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SampleID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SampleID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SampleID })
+        </td>
+    </tr>
+}
+
+</table>

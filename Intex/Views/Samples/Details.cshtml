@@ -1,0 +1,58 @@
+﻿@model Intex.Models.Sample
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sample</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Test.TestDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Test.TestDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SampleDateCollected)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SampleDateCollected)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SampleActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SampleActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SampleConcentration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SampleConcentration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SampleResults)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SampleResults)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SampleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

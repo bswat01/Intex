@@ -1,0 +1,74 @@
+﻿@model Intex.Models.WorkOrder
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>WorkOrder</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount.DiscountID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount.DiscountID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quote.QuoteID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quote.QuoteID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderCompleteDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderCompleteDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderFinalPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderFinalPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderDueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDueDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.WorkOrderID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
