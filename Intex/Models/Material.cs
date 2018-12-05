@@ -19,6 +19,6 @@ namespace Intex.Models
 
         [Required]
         [Display(Name = "Material Cost")]
-        public float MaterialCost { get; set; }
+        public decimal MaterialCost { get; set; }
     }
 }

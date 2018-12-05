@@ -3,5 +3,11 @@
     ViewBag.Title = "Home";
 }
 
-<h2>Seattle Employee View</h2>
+<h2>Seattle Employee Portal</h2>
+
+<div>
+    <a href="@Url.Action("FindCustomer", "Seattle")">Customer Information</a>
+    <a href="@Url.Action("FindWorkOrder", "Seattle")">Current Work Orders</a>
+    <a href="@Url.Action("CreateQuota", "Seattle")">Create Quota</a>
+</div>
 

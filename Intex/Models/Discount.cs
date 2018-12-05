@@ -14,6 +14,6 @@ namespace Intex.Models
         public int DiscountID { get; set; }
 
         [Display(Name ="Discount Amount")]
-        public float DiscountAmount { get; set; }
+        public decimal DiscountAmount { get; set; }
     }
 }

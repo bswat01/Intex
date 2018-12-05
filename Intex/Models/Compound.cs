@@ -39,17 +39,14 @@ namespace Intex.Models
 
         [Required]
         [Display(Name = "Compound Weight")]
-        public float CompoundWeight { get; set; }
+        public decimal CompoundWeight { get; set; }
 
         [Required]
         [Display(Name = "Compound Molecular Mass")]
-        public float CompoundMolecularMass { get; set; }
+        public decimal CompoundMolecularMass { get; set; }
 
         [Required]
         [Display(Name = "Compound Max Tolerated Dose")]
-        public float CompoundMaxToleratedDose { get; set; }
-
-
-
+        public decimal CompoundMaxToleratedDose { get; set; }
     }
 }

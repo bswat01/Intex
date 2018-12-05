@@ -16,7 +16,7 @@ namespace Intex.Models
         [Display(Name = "Date of Order Completion")]
         public string OrderCompleteDate { get; set; }
 
-        public float? OrderFinalPrice { get; set; }
+        public decimal? OrderFinalPrice { get; set; }
 
         public string OrderDueDate { get; set; }
 

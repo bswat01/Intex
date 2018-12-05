@@ -16,5 +16,20 @@ namespace Intex.Controllers
         {
             return View();
         }
+
+        public ActionResult FindCustomer()
+        {
+            return View();
+        }
+
+        public ActionResult FindWorkOrder()
+        {
+            return View();
+        }
+
+        public ActionResult CreateQuota()
+        {
+            return View();
+        }
     }
 }

@@ -19,15 +19,15 @@ namespace Intex.Models
 
         [Required]
         [Display(Name = "Test Cost")]
-        public float TestCost { get; set; }
+        public decimal TestCost { get; set; }
 
         [Required]
         [Display(Name = "Base Customer Price")]
-        public float BasePrice { get; set; }
+        public decimal BasePrice { get; set; }
 
         //Number od Days to complete the test
         [Required]
         [Display(Name = "Days to Complete")]
-        public string NumberDays { get; set; }
+        public int NumberDays { get; set; }
     }
 }

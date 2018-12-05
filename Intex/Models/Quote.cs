@@ -15,6 +15,6 @@ namespace Intex.Models
 
         [Required]
         [Display(Name = "Quote Amount")]
-        public float QuoteAmount { get; set; }
+        public decimal QuoteAmount { get; set; }
     }
 }

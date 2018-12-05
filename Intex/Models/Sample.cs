@@ -18,7 +18,7 @@ namespace Intex.Models
         public bool? SampleActive { get; set; }
 
         [Display(Name = "Sample Concentration")]
-        public float SampleConcentration { get; set; }
+        public decimal SampleConcentration { get; set; }
 
         [Display(Name = "Sample Results")]
         public string SampleResults { get; set; }

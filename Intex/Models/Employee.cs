@@ -38,7 +38,7 @@ namespace Intex.Models
 
         [Required]
         [Display(Name = "Hourly Wage")]
-        public string HourlyWage { get; set; }
+        public decimal HourlyWage { get; set; }
 
         //Foreign Keys
         [Required]
