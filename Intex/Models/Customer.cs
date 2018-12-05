@@ -14,11 +14,11 @@ namespace Intex.Models
         public int CustomerID { get; set; }
 
         [Required]
-        [Display(Name ="First Name")]
+        [Display(Name ="Customer First Name")]
         public string FirstName { get; set; }
 
         [Required]
-        [Display(Name = "Last Name")]
+        [Display(Name = "Customer Last Name")]
         public string LastName { get; set; }
 
         [Required]
@@ -37,11 +37,11 @@ namespace Intex.Models
         public string Note { get; set; }
 
         [Required]
-        [Display(Name = "Username")]
+        [Display(Name = "Customer Username")]
         public string Username { get; set; }
 
         [Required]
-        [Display(Name = "Password")]
+        [Display(Name = "Customer Password")]
         public string Password { get; set; }
 
         //Foreign Keys

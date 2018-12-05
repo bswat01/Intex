@@ -263,6 +263,9 @@
     <Content Include="Views\Samples\Details.cshtml" />
     <Content Include="Views\Samples\Edit.cshtml" />
     <Content Include="Views\Samples\Index.cshtml" />
+    <Content Include="Views\Seattle\FindCustomer.cshtml" />
+    <Content Include="Views\Seattle\CustomerFound.cshtml" />
+    <Content Include="Views\Seattle\FindCustomerWorkOrder.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

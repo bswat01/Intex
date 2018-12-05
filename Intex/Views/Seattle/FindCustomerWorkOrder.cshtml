@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Intex.Models.WorkOrder>
+
+@{
+    ViewBag.Title = "FindCustomerWorkOrder";
+}
+
+<h2>Find Customer Work Order</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discount.DiscountID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quote.QuoteID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderCompleteDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderFinalPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderDueDate)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discount.DiscountID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quote.QuoteID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderCompleteDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderFinalPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDueDate)
+            </td>
+        </tr>
+    }
+
+</table>
+
+

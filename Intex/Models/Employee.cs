@@ -13,11 +13,11 @@ namespace Intex.Models
         [Key]
         public int EmployeeID { get; set; }
         [Required]
-        [Display(Name = "First Name")]
+        [Display(Name = "Employee First Name")]
         public string FirstName { get; set; }
 
         [Required]
-        [Display(Name = "Last Name")]
+        [Display(Name = "Employee Last Name")]
         public string LastName { get; set; }
 
         [Required]
@@ -29,11 +29,11 @@ namespace Intex.Models
         public string Email { get; set; }
 
         [Required]
-        [Display(Name = "Username")]
+        [Display(Name = "Employee Username")]
         public string Username { get; set; }
 
         [Required]
-        [Display(Name = "Password")]
+        [Display(Name = "Employee Password")]
         public string Password { get; set; }
 
         [Required]
