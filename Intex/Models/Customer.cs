@@ -36,9 +36,17 @@ namespace Intex.Models
         [Display(Name = "Notes")]
         public string Note { get; set; }
 
+        [Required]
+        [Display(Name = "Username")]
+        public string Username { get; set; }
+
+        [Required]
+        [Display(Name = "Password")]
+        public string Password { get; set; }
+
         //Foreign Keys
         [ForeignKey("Billing")]
-        public int BillingID { get; set; }
+        public virtual int BillingID { get; set; }
         public virtual Billing Billing { get; set; }
     }
 }

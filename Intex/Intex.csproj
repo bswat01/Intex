@@ -96,6 +96,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\myStyles.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -112,6 +113,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BillingsController.cs" />
     <Compile Include="Controllers\CompoundsController.cs" />
+    <Compile Include="Controllers\CustomerOrderController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\DiscountsController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
@@ -121,6 +123,8 @@
     <Compile Include="Controllers\MaterialsController.cs" />
     <Compile Include="Controllers\QuotesController.cs" />
     <Compile Include="Controllers\SamplesController.cs" />
+    <Compile Include="Controllers\SeattleController.cs" />
+    <Compile Include="Controllers\SingaporeController.cs" />
     <Compile Include="Controllers\TestsController.cs" />
     <Compile Include="Controllers\WorkOrdersController.cs" />
     <Compile Include="DAL\ContextIntex.cs" />
@@ -135,6 +139,7 @@
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeType.cs" />
     <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Material.cs" />
     <Compile Include="Models\OrderCompound.cs" />
     <Compile Include="Models\Quote.cs" />
@@ -152,7 +157,7 @@
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\SampleView.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Locations\Create.cshtml" />
     <Content Include="Views\Locations\Delete.cshtml" />
@@ -169,21 +174,11 @@
     <Content Include="Views\Compounds\Details.cshtml" />
     <Content Include="Views\Compounds\Edit.cshtml" />
     <Content Include="Views\Compounds\Index.cshtml" />
-    <Content Include="Views\Customers\Create.cshtml" />
-    <Content Include="Views\Customers\Delete.cshtml" />
-    <Content Include="Views\Customers\Details.cshtml" />
-    <Content Include="Views\Customers\Edit.cshtml" />
-    <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Discounts\Create.cshtml" />
     <Content Include="Views\Discounts\Delete.cshtml" />
     <Content Include="Views\Discounts\Details.cshtml" />
     <Content Include="Views\Discounts\Edit.cshtml" />
     <Content Include="Views\Discounts\Index.cshtml" />
-    <Content Include="Views\Employees\Create.cshtml" />
-    <Content Include="Views\Employees\Delete.cshtml" />
-    <Content Include="Views\Employees\Details.cshtml" />
-    <Content Include="Views\Employees\Edit.cshtml" />
-    <Content Include="Views\Employees\Index.cshtml" />
     <Content Include="Views\EmployeeTypes\Create.cshtml" />
     <Content Include="Views\EmployeeTypes\Delete.cshtml" />
     <Content Include="Views\EmployeeTypes\Details.cshtml" />
@@ -214,6 +209,20 @@
     <Content Include="Views\WorkOrders\Details.cshtml" />
     <Content Include="Views\WorkOrders\Edit.cshtml" />
     <Content Include="Views\WorkOrders\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\CustomerOrder\Home.cshtml" />
+    <Content Include="Views\Singapore\Home.cshtml" />
+    <Content Include="Views\Seattle\Home.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

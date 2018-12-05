@@ -49,7 +49,7 @@ namespace Intex.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,CompanyName,Phone,Email,Note,BillingID")] Customer customer)
+        public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,CompanyName,Phone,Email,Note,Username,Password,BillingID")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace Intex.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CustomerID,FirstName,LastName,CompanyName,Phone,Email,Note,BillingID")] Customer customer)
+        public ActionResult Edit([Bind(Include = "CustomerID,FirstName,LastName,CompanyName,Phone,Email,Note,Username,Password,BillingID")] Customer customer)
         {
             if (ModelState.IsValid)
             {

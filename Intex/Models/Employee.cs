@@ -36,16 +36,20 @@ namespace Intex.Models
         [Display(Name = "Password")]
         public string Password { get; set; }
 
+        [Required]
+        [Display(Name = "Hourly Wage")]
+        public string HourlyWage { get; set; }
+
         //Foreign Keys
         [Required]
         [ForeignKey("Location")]
-        public int LocationID { get; set; }
+        public virtual int LocationID { get; set; }
         public virtual Location Location { get; set; }
 
+        [Required]
         [ForeignKey("EmployeeType")]
-        public int EmployeeTypeID { get; set; }
+        public virtual int EmployeeTypeID { get; set; }
         public virtual EmployeeType EmployeeType { get; set; }
-
 
     }
 }

@@ -12,6 +12,7 @@ namespace Intex.Models
     {
         [Key]
         public int BillingID { get; set; }
+
         [Required]
         [Display(Name = "Address Line 1")]
         public string AddressOne { get; set; }
