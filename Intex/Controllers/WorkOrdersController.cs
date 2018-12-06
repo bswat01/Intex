@@ -100,6 +100,8 @@ namespace Intex.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "WorkOrderID,OrderCompleteDate,OrderFinalPrice,OrderDueDate,CustomerID,DiscountID,EmployeeID,QuoteID")] WorkOrder workOrder)
         {
+
+
             if (ModelState.IsValid)
             {
                 db.Entry(workOrder).State = EntityState.Modified;
