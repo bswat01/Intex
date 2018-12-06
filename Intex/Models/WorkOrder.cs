@@ -16,8 +16,10 @@ namespace Intex.Models
         [Display(Name = "Date of Order Completion")]
         public string OrderCompleteDate { get; set; }
 
+        [Display(Name = "Order Final Price")]
         public decimal? OrderFinalPrice { get; set; }
 
+        [Display(Name = "Order Due Date")]
         public string OrderDueDate { get; set; }
 
         //Foreign Keys

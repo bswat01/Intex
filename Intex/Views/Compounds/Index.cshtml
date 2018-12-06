@@ -3,9 +3,11 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
-
+<br />
+<br />
+<div class="section-headlines">
+    <h4>Compounds</h4>
+</div>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -41,41 +43,42 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompoundName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompoundQuantity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompoundDateArrived)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompoundReceivedBy)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompoundDateDue)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompoundAppearance)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompoundWeight)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompoundMolecularMass)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompoundMaxToleratedDose)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CompoundID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CompoundID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CompoundID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompoundName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompoundQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompoundDateArrived)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompoundReceivedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompoundDateDue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompoundAppearance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompoundWeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompoundMolecularMass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompoundMaxToleratedDose)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CompoundID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CompoundID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CompoundID })
+            </td>
+        </tr>
+    }
 
 </table>
