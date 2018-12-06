@@ -10,31 +10,19 @@
 </div>
 
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Customer.FirstName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Discount.DiscountAmount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Employee.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Quote.QuoteAmount)
+            @Html.DisplayNameFor(model => model.OrderDueDate)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.OrderCompleteDate)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.OrderFinalPrice)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OrderDueDate)
         </th>
         <th></th>
     </tr>
@@ -43,30 +31,33 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Customer.FirstName)
+            @Html.DisplayFor(modelItem => item.Customer.FirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Discount.DiscountID)
+            @Html.DisplayFor(modelItem => item.OrderDueDate)
             </td>
+            @if(item.OrderCompleteDate == null)
+            {
+                <td>Not yet complete</td>
+            }
+            else
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderCompleteDate)
+                </td>
+            }
+            @if(item.OrderFinalPrice == null)
+            {
+                <td>Total Price not yet calculated</td>
+            }
+            else
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderFinalPrice)
+                </td>
+            }
             <td>
-                @Html.DisplayFor(modelItem => item.Employee.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quote.QuoteID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderCompleteDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderFinalPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderDueDate)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.WorkOrderID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.WorkOrderID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.WorkOrderID })
+            @Html.ActionLink("Edit", "Edit", new { id = item.WorkOrderID })
             </td>
         </tr>
     }

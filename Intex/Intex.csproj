@@ -138,6 +138,7 @@
     <Content Include="images\team\3.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\exampleExcel.xlsx" />
     <None Include="Properties\PublishProfiles\Intex20181204091158 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
