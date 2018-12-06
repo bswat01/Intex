@@ -1,7 +1,7 @@
 ﻿@model Intex.Models.Customer
 
 @{
-    ViewBag.Title = "EditCustomer";
+    ViewBag.Title = "Edit Customer";
 }
 
 <div class="section-headlines">
@@ -91,7 +91,5 @@
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Edit Billing", "EditBilling", new { id = Model.BillingID })
-</div>
+<br />
+<div><a href="@Url.Action("EditBilling", "CustomerOrder", new { CustID = Model.CustomerID })">Edit Billing</a></div>

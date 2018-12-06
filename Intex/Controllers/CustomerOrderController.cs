@@ -47,16 +47,41 @@ namespace Intex.Controllers
             {
                 db.Entry(customer).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Home", customer);
             }
             ViewBag.BillingID = new SelectList(db.Billings, "BillingID", "AddressOne", customer.BillingID);
             return View(customer);
         }
 
-        public ActionResult EditBilling(int id)
+        public ActionResult EditBilling(int? CustID)
         {
-            var Billings = db.Billings.Find(id);
+            int Billing = db.Database.SqlQuery<int>(
+                    "SELECT BillingID " +
+                    "FROM Customer " +
+                    "WHERE CustomerID = '" + CustID + "'").FirstOrDefault();
+
+            var Billings = db.Billings.Find(Billing);
             return View(Billings);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditBilling([Bind(Include = "BillingID,AddressOne,AddressTwo,City,State,ZIP,CCNumber,ExpirationDate,CVCCode")] Billing billing)
+        {
+            int Customer = db.Database.SqlQuery<int>(
+                    "SELECT CustomerID " +
+                    "FROM CUSTOMER " +
+                    "WHERE BillingID = '" + billing.BillingID + "'").FirstOrDefault();
+
+            var customers = db.Customers.Find(Customer);
+
+            if (ModelState.IsValid)
+            {
+                db.Entry(billing).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Home", customers);
+            }
+            return View(billing);
         }
 
         public ActionResult GetCustomerWorkOrder(int CustID)
