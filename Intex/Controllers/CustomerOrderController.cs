@@ -65,7 +65,7 @@ namespace Intex.Controllers
                       "SELECT * " +
                       "FROM WorkOrder " +
                       "WHERE CustomerID = '" + CustID + "'");
-            return View(CheckCust);
+            return View("CustomerWorkOrder",CheckCust);
         }
     }
 }

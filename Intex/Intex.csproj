@@ -272,6 +272,7 @@
     <Content Include="Views\Seattle\QuoteAmount.cshtml" />
     <Content Include="Views\CustomerOrder\EditCustomer.cshtml" />
     <Content Include="Views\CustomerOrder\EditBilling.cshtml" />
+    <Content Include="Views\CustomerOrder\CustomerWorkOrder.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
