@@ -22,6 +22,12 @@ namespace Intex.Controllers
             return View(workOrders.ToList());
         }
 
+        public ActionResult IndexSeattle()
+        {
+            var workOrders = db.WorkOrders.Include(w => w.Customer).Include(w => w.Discount).Include(w => w.Employee).Include(w => w.Quote);
+            return View(workOrders.ToList());
+        }
+
         // GET: WorkOrders/Details/5
         public ActionResult Details(int? id)
         {

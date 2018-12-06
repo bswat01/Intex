@@ -3,32 +3,16 @@
 @{
     ViewBag.Title = "Create";
 }
-
-<h2>Create</h2>
+<br />
+<h2>Create New Work Order</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>WorkOrder</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.OrderCompleteDate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.OrderCompleteDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.OrderCompleteDate, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.OrderFinalPrice, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.OrderFinalPrice, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.OrderFinalPrice, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.OrderDueDate, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -39,7 +23,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CustomerID, "CustomerID", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CustomerID, "Customer", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("CustomerID", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.CustomerID, "", new { @class = "text-danger" })
@@ -47,7 +31,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DiscountID, "DiscountID", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.DiscountID, "Discount", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("DiscountID", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.DiscountID, "", new { @class = "text-danger" })
@@ -55,7 +39,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.EmployeeID, "EmployeeID", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.EmployeeID, "Employee", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("EmployeeID", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.EmployeeID, "", new { @class = "text-danger" })
@@ -63,7 +47,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.QuoteID, "QuoteID", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.QuoteID, "Quote", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("QuoteID", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.QuoteID, "", new { @class = "text-danger" })
@@ -79,5 +63,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "IndexSeattle")
 </div>

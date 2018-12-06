@@ -1,24 +1,27 @@
 ﻿@model IEnumerable<Intex.Models.WorkOrder>
 
 @{
-    ViewBag.Title = "FindCustomerWorkOrder";
+    ViewBag.Title = "Index";
 }
+<br />
+<h2>Current Work Orders</h2>
 
-<h2>Find Customer Work Order</h2>
-
+<p>
+    @Html.ActionLink("Create New Order", "Create")
+</p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Customer.Username)
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Discount.DiscountID)
+            @Html.DisplayNameFor(model => model.Discount.DiscountAmount)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Employee.Username)
+            @Html.DisplayNameFor(model => model.Employee.FirstName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Quote.QuoteID)
+            @Html.DisplayNameFor(model => model.Quote.QuoteAmount)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.OrderCompleteDate)
@@ -35,16 +38,16 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Customer.Username)
+                @Html.DisplayFor(modelItem => item.Customer.FirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Discount.DiscountID)
+                @Html.DisplayFor(modelItem => item.Discount.DiscountAmount)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Employee.Username)
+                @Html.DisplayFor(modelItem => item.Employee.FirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Quote.QuoteID)
+                @Html.DisplayFor(modelItem => item.Quote.QuoteAmount)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.OrderCompleteDate)
@@ -59,5 +62,3 @@
     }
 
 </table>
-
-

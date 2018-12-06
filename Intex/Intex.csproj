@@ -265,7 +265,9 @@
     <Content Include="Views\Samples\Index.cshtml" />
     <Content Include="Views\Seattle\FindCustomer.cshtml" />
     <Content Include="Views\Seattle\CustomerFound.cshtml" />
-    <Content Include="Views\Seattle\FindCustomerWorkOrder.cshtml" />
+    <Content Include="Views\WorkOrders\IndexSeattle.cshtml" />
+    <Content Include="Views\Seattle\CreateQuota.cshtml" />
+    <Content Include="Views\Seattle\QuoteAmount.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

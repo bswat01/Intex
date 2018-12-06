@@ -39,29 +39,31 @@ namespace Intex.Controllers
 
         public ActionResult FindWorkOrder()
         {
-            return View();
-        }
-
-        public ActionResult FindCustomerWorkOrder(int custID)
-        {
-            var FindCustomer = db.Database.SqlQuery<WorkOrder>(
-                   "SELECT * " +
-                   "FROM WorkOrder " +
-                   "WHERE CustomerID = '" + custID + "'");
-
-            return View(FindCustomer);
+            return RedirectToAction("IndexSeattle", "WorkOrders");
         }
 
         public ActionResult CreateQuota()
         {
             return View();
         }
-
-        public ActionResult Catalog()
+        [HttpPost]
+        public ActionResult CreateQuota(Compound compound)
         {
-            //Summary information on Assay's run
-            //More detailed information
-            return RedirectToAction("Index", "Catalog");
+            
+            if (compound.CompoundName == "Compound Test 1" || compound.CompoundName == "Compound Test 2" || compound.CompoundName == "Compound Test 3" )
+            {
+                ViewBag.Amount = "$11,000 - $15,000";
+                ViewBag.TestsNeeded = "<li>Biochemical Pharmacology® (BP)</li>" +
+                    "<li>DiscoveryScreen® (DS)</li>";
+                return View("QuoteAmount");
+            }
+            ViewBag.Amount = "Will soon be determined by qualified staff";
+            return View("QuoteAmount");
+        }
+
+        public ActionResult NewWorkOrder()
+        {
+            return RedirectToAction("Create", "WorkOrders");
         }
     }
 }
