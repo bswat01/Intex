@@ -6,15 +6,12 @@
 <br />
 <br />
 <div class="section-headlines">
-    <h4>Work Orders Archive</h4>
+    <h4>Customer Work Orders</h4>
 </div>
 
 
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Customer.FirstName)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.OrderDueDate)
         </th>
@@ -24,6 +21,12 @@
         <th>
             @Html.DisplayNameFor(model => model.OrderFinalPrice)
         </th>
+        <th>
+            Quote
+        </th>
+        <th>
+            Discount
+        </th>
         <th></th>
     </tr>
 
@@ -31,12 +34,9 @@
     {
         <tr>
             <td>
-            @Html.DisplayFor(modelItem => item.Customer.FirstName)
+                @Html.DisplayFor(modelItem => item.OrderDueDate)
             </td>
-            <td>
-            @Html.DisplayFor(modelItem => item.OrderDueDate)
-            </td>
-            @if(item.OrderCompleteDate == null)
+            @if (item.OrderCompleteDate == null)
             {
                 <td>Not yet complete</td>
             }
@@ -46,7 +46,7 @@
                     @Html.DisplayFor(modelItem => item.OrderCompleteDate)
                 </td>
             }
-            @if(item.OrderFinalPrice == null)
+            @if (item.OrderFinalPrice == null)
             {
                 <td>Total Price not yet calculated</td>
             }
@@ -57,7 +57,10 @@
                 </td>
             }
             <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.WorkOrderID })
+                Quote
+            </td>
+            <td>
+                Discount
             </td>
         </tr>
     }

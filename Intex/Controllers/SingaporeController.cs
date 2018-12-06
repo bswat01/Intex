@@ -23,5 +23,10 @@ namespace Intex.Controllers
             //More detailed information
             return RedirectToAction("Index", "Catalog");
         }
+
+        public ActionResult AccessWorkOrders()
+        {
+            return RedirectToAction("Index", "WorkOrders");
+        }
     }
 }
