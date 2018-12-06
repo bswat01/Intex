@@ -3,7 +3,12 @@
     ViewBag.Title = "FindCustomer";
 }
 
-<h2>FindCustomer</h2>
+<br />
+<br />
+<div class="section-headlines">
+    <h4>Find a customer</h4>
+</div>
+
 <hr />
 @using (Html.BeginForm())
 {
@@ -15,7 +20,8 @@
             @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
         </div>
     </div>
-
+   <br />
+   <br />
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="Find" class="btn btn-default" />
