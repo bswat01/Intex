@@ -57,6 +57,7 @@ namespace Intex.Controllers
                     "<li>DiscoveryScreen® (DS)</li>";
                 return View("QuoteAmount");
             }
+            ViewBag.NoTest = "Tests have not yet been determined";
             ViewBag.Amount = "Will soon be determined by qualified staff";
             return View("QuoteAmount");
         }
