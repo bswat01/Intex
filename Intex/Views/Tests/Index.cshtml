@@ -4,8 +4,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<br />
+<br />
+<div class="section-headlines">
+    <h4>Test Billing and Scheduling</h4>
+</div>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -26,26 +29,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TestDescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TestCost)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BasePrice)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumberDays)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TestID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TestID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TestID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BasePrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberDays)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TestID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.TestID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.TestID })
+            </td>
+        </tr>
+    }
 
 </table>

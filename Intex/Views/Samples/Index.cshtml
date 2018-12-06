@@ -4,8 +4,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<br />
+<br />
+<div class="section-headlines">
+    <h4>Samples</h4>
+</div>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -32,32 +35,33 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Compound.CompoundName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Test.TestDescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SampleDateCollected)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SampleActive)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SampleConcentration)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SampleResults)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SampleID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SampleID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SampleID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Compound.CompoundName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Test.TestDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SampleDateCollected)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SampleActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SampleConcentration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SampleResults)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.SampleID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.SampleID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.SampleID })
+            </td>
+        </tr>
+    }
 
 </table>

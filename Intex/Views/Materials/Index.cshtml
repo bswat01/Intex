@@ -4,8 +4,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<br />
+<br />
+<div class="section-headlines">
+    <h4>Materials</h4>
+</div>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -20,20 +23,21 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaterialName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaterialCost)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaterialID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaterialID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaterialID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaterialName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaterialCost)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaterialID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MaterialID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaterialID })
+            </td>
+        </tr>
+    }
 
 </table>
