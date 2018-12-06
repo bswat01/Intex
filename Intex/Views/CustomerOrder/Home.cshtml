@@ -1,4 +1,4 @@
-﻿
+﻿@model Intex.Models.Customer
 @{
     ViewBag.Title = "Home";
 }
@@ -9,14 +9,13 @@
     <h4>Customer Portal</h4>
 </div>
 
+<h2>Welcome @Html.Raw(Model.FirstName + " " + Model.LastName)!</h2>
+
 <div class="media-body">
     <h3>Check your current orders here</h3>
-    <div><a href="#">My orders</a><!--display list of customer orders? functionality?--></div>
-    <br />
-    <h3>Get another quote here</h3>
-    <div><a href="@Url.Action("CreateQuota", "Seattle")">Create Quote</a></div>
+    <div><a href="@Url.Action("GetCustomerWorkOrder", "CustomerOrder", new { CustID = Model.CustomerID })">My orders</a><!--display list of customer orders? functionality?--></div>
     <br />
     <h3>Change your account settings here</h3>
-    <div><a href="#">Account Settings</a><!--edit customer account?--></div>
+    <div><a href="@Url.Action("EditCustomer", "CustomerOrder", new {CustID = Model.CustomerID })">Account Settings</a><!--edit customer account?--></div>
 </div>
 

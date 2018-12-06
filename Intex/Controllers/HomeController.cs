@@ -63,7 +63,7 @@ namespace Intex.Controllers
                 //View for Customer
                 if (CheckCustomer.Count() > 0)
                 {
-                    return RedirectToAction("Home", "CustomerOrder");
+                    return RedirectToAction("Home", "CustomerOrder", login);
                 }
                 ViewBag.Error = "<p>Login Error. Please check your:" +
                 "<ul> <li>Username</li>" +
