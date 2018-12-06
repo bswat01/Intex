@@ -50,6 +50,13 @@ namespace Intex.Controllers
                     "WHERE Username = '" + login.Username + "' AND " +
                     "Password = '" + login.Password + "'");
 
+                var CheckManager = db.Database.SqlQuery<Employee>(
+                    "SELECT * " +
+                    "FROM Employee " +
+                    "WHERE Username = '" + login.Username + "' AND " +
+                    "Password = '" + login.Password + "' AND " +
+                    "(EmployeeTypeID = 1 OR EmployeeType = 2");
+
                 //View for Employee in Seattle
                 if (CheckSeattle.Count() > 0)
                 {
@@ -64,6 +71,10 @@ namespace Intex.Controllers
                 if (CheckCustomer.Count() > 0)
                 {
                     return RedirectToAction("Home", "CustomerOrder", login);
+                }
+                if (CheckManager.Count() > 0)
+                {
+                    return RedirectToAction("Home", "Manager", login);
                 }
                 ViewBag.Error = "<p>Login Error. Please check your:" +
                 "<ul> <li>Username</li>" +

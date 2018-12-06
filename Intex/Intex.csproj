@@ -159,6 +159,7 @@
     <Compile Include="Controllers\EmployeeTypesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LocationsController.cs" />
+    <Compile Include="Controllers\ManagerController.cs" />
     <Compile Include="Controllers\MaterialsController.cs" />
     <Compile Include="Controllers\QuotesController.cs" />
     <Compile Include="Controllers\SamplesController.cs" />
@@ -273,6 +274,7 @@
     <Content Include="Views\CustomerOrder\EditCustomer.cshtml" />
     <Content Include="Views\CustomerOrder\EditBilling.cshtml" />
     <Content Include="Views\CustomerOrder\CustomerWorkOrder.cshtml" />
+    <Content Include="Views\Manager\Home.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
