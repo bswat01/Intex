@@ -32,6 +32,12 @@ namespace Intex.Controllers
             //More detailed information
             return RedirectToAction("Index", "Catalog");
         }
+
+        public ActionResult Login()
+        {
+            return RedirectToAction("Login", "Home");
+        }
+
         [HttpGet]
         public ActionResult EditCustomer(int CustID)
         {
