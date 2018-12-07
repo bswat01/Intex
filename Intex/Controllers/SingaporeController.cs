@@ -24,6 +24,11 @@ namespace Intex.Controllers
             return RedirectToAction("Index", "Catalog");
         }
 
+        public ActionResult Login()
+        {
+            return RedirectToAction("Login", "Home");
+        }
+
         public ActionResult AccessWorkOrders()
         {
             return RedirectToAction("Index", "WorkOrders");

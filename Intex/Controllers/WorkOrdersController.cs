@@ -28,6 +28,18 @@ namespace Intex.Controllers
             return View(workOrders.ToList());
         }
 
+        public ActionResult Catalog()
+        {
+            //Summary information on Assay's run
+            //More detailed information
+            return RedirectToAction("Index", "Catalog");
+        }
+
+        public ActionResult Login()
+        {
+            return RedirectToAction("Login", "Home");
+        }
+
         // GET: WorkOrders/Details/5
         public ActionResult Details(int? id)
         {

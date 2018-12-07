@@ -22,6 +22,18 @@ namespace Intex.Controllers
             return View(customers.ToList());
         }
 
+        public ActionResult Catalog()
+        {
+            //Summary information on Assay's run
+            //More detailed information
+            return RedirectToAction("Index", "Catalog");
+        }
+
+        public ActionResult Login()
+        {
+            return RedirectToAction("Login", "Home");
+        }
+
         // GET: Customers/Details/5
         public ActionResult Details(int? id)
         {
