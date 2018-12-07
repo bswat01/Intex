@@ -45,7 +45,7 @@ namespace Intex.Controllers
 
         public ActionResult GetWorkOrders()
         {
-            return RedirectToAction("Index", "Employees");
+            return RedirectToAction("Index", "WorkOrders");
         }
 
         public ActionResult AddDiscount()
